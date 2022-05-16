@@ -1,9 +1,9 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+/*let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let soma = 0;
 let valorMaior = 0;
 let arrayImpar = []
 let valorMenor = numbers[0];
-let divisao = 0;
+let divisao = 0; */
 
 /* // 1. Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log();
 
@@ -96,3 +96,26 @@ for (let index = 0; index < novoArray.length; index += 1) {
   console.log (divisao)
 }
 */
+
+// Exercicio BONUS
+// 1. Ordene o array numbers em ordem crescente e imprima seus valores;
+/* 
+function sortFunction (a, b) {
+  return (a - b)
+}
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+numbers.sort(sortFunction);
+console.log (numbers);
+
+// 2. Ordene o array numbers em ordem decrescente e imprima seus valores;
+
+function sortFunction (a, b) {
+  return (a - b)
+}
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+numbers.sort(sortFunction);
+numbers.reverse(sortFunction);
+console.log (numbers);
+ */
