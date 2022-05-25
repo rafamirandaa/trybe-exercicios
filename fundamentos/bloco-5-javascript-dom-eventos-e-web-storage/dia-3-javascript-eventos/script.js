@@ -12,10 +12,11 @@ function createDaysOfTheWeek() {
 };
 
 createDaysOfTheWeek();
+// Alocando array no escopo global (para usar em outras funções)
+let allNumbers = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-
-function addDays() {
-  let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+function addDays(parametro) {
+  let dezDaysList = parametro;
   let dezDays = document.querySelector('#days');
 
 // laço criando as "li" e adicionando as classes respectivas de cada elemento.
@@ -35,22 +36,22 @@ function addDays() {
 
   };
 };
-addDays();
+addDays(allNumbers);
 
 // Adicionando botão 'Feriados'
-function feriados() {
+function feriados(nomeBotao, classe) {
   let containerBotao = document.querySelector(".buttons-container");
   let botaoFeriados = document.createElement('button');
-  botaoFeriados.classList.add("holidayButton")
-  botaoFeriados.innerHTML = "Feriados";
+  botaoFeriados.classList.add(classe)
+  botaoFeriados.innerHTML = nomeBotao;
 
   containerBotao.appendChild(botaoFeriados)
-  return botaoFeriados
 }
-feriados();
+feriados('Feriados', "holidayButton");
+feriados('Sexta-feira', "fridayButton");
 
 // Ao clicar no botão 'Feriados', encontrar os feriados.
-function clickBotao() {
+function clickBotaoFeriados() {
   let getButton = document.querySelector(".holidayButton");
   let getHolidayDays = document.querySelectorAll(".holiday");
   let selectElementColor = 'rgb(238,238,238)';
@@ -66,5 +67,25 @@ getButton.addEventListener('click', function(){
   }
 });
 }
-clickBotao();
+clickBotaoFeriados();
 
+// Ao clicar no botão 'Sexta-feira', modifica o texto dos dias para "Sextou".
+function clickBotaoSextaFeira(parametro) {
+  let getButton = document.querySelector(".fridayButton");
+  let getFridayDays = document.querySelectorAll(".friday");
+  let newFridayText = 'Sextou';
+
+
+getButton.addEventListener('click', function(){
+  for(let index = 0; index < getFridayDays.length; index += 1) {
+    if(getFridayDays[index].innerHTML !== newFridayText) {
+      getFridayDays[index].innerHTML = newFridayText;
+    } else {
+      getFridayDays[index].innerHTML = parametro[index];
+    }
+  }
+  });
+}
+let dezFridays = [4, 11, 18, 25]; // Criando array no escopo global das sexta-feiras para usar como parametro.
+
+clickBotaoSextaFeira(dezFridays);
