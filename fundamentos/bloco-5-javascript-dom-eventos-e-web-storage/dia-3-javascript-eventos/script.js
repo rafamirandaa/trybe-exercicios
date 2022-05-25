@@ -90,6 +90,7 @@ let dezFridays = [4, 11, 18, 25]; // Criando array no escopo global das sexta-fe
 
 clickBotaoSextaFeira(dezFridays);
 
+// Adicionando Zoom nos números do calendário
 function zoomIn() {
   let days = document.querySelector('#days');
 
@@ -110,3 +111,22 @@ function zoomOut() {
 
 zoomIn();
 zoomOut();
+// Adicionando span com um parametro
+function task(parametro) {
+  let local = document.querySelector('.my-tasks');
+  let element = document.createElement('span');
+  element.innerHTML = parametro;
+  local.appendChild(element);
+}
+task('Projeto: ');
+
+// Adicionando atributo cor
+function taskName(collor) {
+  let local = document.querySelector('.my-tasks');
+  let elementCollor = document.createElement('div');
+  elementCollor.classList.add('task');
+  elementCollor.attributes = elementCollor.style.background = collor;
+  local.appendChild(elementCollor);
+  
+}
+taskName('red');
