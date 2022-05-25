@@ -111,6 +111,7 @@ function zoomOut() {
 
 zoomIn();
 zoomOut();
+
 // Adicionando span com um parametro
 function task(parametro) {
   let local = document.querySelector('.my-tasks');
@@ -130,3 +131,20 @@ function taskName(collor) {
   
 }
 taskName('red');
+
+// Adicionando evento selecionador de cor
+// Verificar por que querySelectorAll não funcionou em "taskSelected"
+function collorSelect() {
+  let myTask = document.querySelector('.task');
+  let taskSelected = document.getElementsByClassName('task selected');
+
+  myTask.addEventListener('click', function(event){
+    if (taskSelected.length === 0){
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+}
+collorSelect();
+
