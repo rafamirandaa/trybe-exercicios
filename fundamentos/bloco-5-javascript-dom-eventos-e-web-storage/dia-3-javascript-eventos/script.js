@@ -134,7 +134,7 @@ taskName('red');
 
 // Adicionando evento selecionador de cor
 // Verificar por que querySelectorAll não funcionou em "taskSelected"
-function collorSelect() {
+function colorSelect() {
   let myTask = document.querySelector('.task');
   let taskSelected = document.getElementsByClassName('task selected');
 
@@ -146,5 +146,4 @@ function collorSelect() {
     }
   });
 }
-collorSelect();
-
+colorSelect();
