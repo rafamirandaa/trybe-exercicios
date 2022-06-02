@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  border: 4px gray solid;
+  margin: 10rem 25% 0 25%;
+  padding: 2rem 2rem 2rem 2rem;
+  max-height: 50rem;
+  width: auto;
+}
+
+input {
+  width: 15rem;
+  height: 1.5rem;
+}
+
+#pDestino {
+  margin-top: 1rem;
+}
+
+#pTextArea {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#pDateTravel {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.3rem 1.5rem;
+  border-radius: 6px;
+  border: 2px gray solid;
+  cursor: pointer;
+}
+
+/* Configs inputs diretamente */
+
+.inputName {
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+
+#email {
+  padding: 5px;
+}
+
+.inputRadio {
+  margin-top:0.8rem;
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+  width: 1.1rem;
+}
+
+.radioClass {
+  margin-top: 1rem;
+}
+
+#textArea {
+  resize: none;
+  padding: 5px;
+}
+
+#date {
+  width: 7rem;
+}
+
+.inputCheckbox {
+  width: 1.2rem;
+}
+
+
+.labelCheckbox {
+  margin-left: 0.3rem;
+}
+
+/* Fim */
+
+/* Configs divs dos inputs */
+
+#divInputText {
+  display: flex;
+  flex-direction: column;
+}
+
+#divInputRadio {
+  display: flex;
+  flex-direction: row;
+}
+
+#divCheckboxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+#divButtons {
+  margin-top: 1.5rem;
+}
+
+/* Fim */
+
