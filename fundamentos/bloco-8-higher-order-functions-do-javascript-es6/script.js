@@ -19,7 +19,7 @@ console.log(newEmployees(employedPerson('Rafael Miranda de Oliveira')));
 
 
 // -------------------------------------------------------------
- */
+
 let numSorteado = Math.floor(Math.random() * (6 - 1)) + 1;
 
 const resultSorteio = (verificadorMatch) => {
@@ -34,3 +34,27 @@ const verificadorMatch = (numSorteado) => {
 }
 
 resultSorteio(verificadorMatch(numSorteado));
+ */
+// --------------------------------------------------------------
+
+const gabarito = ['Taís', 'Rafa', 'Guisi', 'Thuany']
+const respostaPessoa = ['Taís', 'Rafa' , 'Guisi', 'Thuany']
+
+const verificador = (gabarito, respostaPessoa) => {
+  let contador = 0;
+  let arrayRespostasCorretas = [];
+  for (let index = 0; index < gabarito.length; index += 1){
+    if (gabarito[index] === respostaPessoa[index]){
+      contador += 1;
+      arrayRespostasCorretas.push(gabarito[index])
+    } else
+      contador -= 0.5;
+  }
+  return `Sua nota é ${contador} e suas respostas corretas são: ${arrayRespostasCorretas}`;
+}
+
+const resultadoFinal = (verificador) => {
+  return console.log(verificador);
+}
+
+resultadoFinal(verificador(gabarito, respostaPessoa));
