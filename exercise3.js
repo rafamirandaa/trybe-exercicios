@@ -63,3 +63,6 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+const genreFictionOrFantasy = (books) => books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+
+console.log(genreFictionOrFantasy(books));
