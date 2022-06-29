@@ -9,3 +9,5 @@ function flatten(arrays) {
 }
 
 console.log(flatten(arrays));
+
+console.log(arrays)
